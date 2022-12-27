@@ -62,10 +62,8 @@ public class CityController {
     public ModelAndView showInfoPage(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/info");
-
         List<CountryDTO> countries = countryService.getAllCountryDTO();
         modelAndView.addObject("countries", countries);
-
         Optional<CityDTO> cityDTOS = cityService.getCityDTOById(id);
         modelAndView.addObject("city", cityDTOS.get());
         return modelAndView;
@@ -75,12 +73,10 @@ public class CityController {
     @GetMapping("/delete/{id}")
     public ModelAndView showDeletePage(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("/delete");
-
         Optional<CityDTO> cityDTOS = cityService.getCityDTOById(id);
         modelAndView.addObject("city", cityDTOS.get());
         return modelAndView;
     }
-
 
 
     @PostMapping("/delete/{id}")
@@ -102,7 +98,7 @@ public class CityController {
 
             List<ObjectError> errors = bindingResult.getAllErrors();
 
-            modelAndView.addObject("countries", countries); 
+            modelAndView.addObject("countries", countries);
             modelAndView.addObject("city", cityDTO);
             modelAndView.addObject("errors", errors);
 

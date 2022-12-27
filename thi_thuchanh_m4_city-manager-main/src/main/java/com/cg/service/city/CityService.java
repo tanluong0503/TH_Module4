@@ -12,4 +12,5 @@ public interface CityService extends IGeneralService<City> {
     List<CityDTO> getAllCityDTO();
     Optional<CityDTO> getCityDTOById(Long id);
     void deleteById(Long id);
+
 }

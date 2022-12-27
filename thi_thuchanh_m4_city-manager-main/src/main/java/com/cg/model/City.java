@@ -39,6 +39,7 @@ public class City {
     @JoinColumn(name = "country_id")
     private Country country;
 
+
     public CityDTO toCityDTO() {
         return new CityDTO()
                 .setId(id.toString())

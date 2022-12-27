@@ -21,6 +21,7 @@ public interface CityRepository extends JpaRepository<City, Long> {
             "FROM City c ")
     List<CityDTO> getAllCityDTO();
 
+
     @Query("SELECT NEW com.cg.model.dto.CityDTO (" +
             "c.id, " +
             "c.cityName ," +

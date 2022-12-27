@@ -27,7 +27,6 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
-
         HiddenHttpMethodFilter httpMethodFilter = new HiddenHttpMethodFilter();
         return  new Filter[]{characterEncodingFilter, httpMethodFilter};
 

@@ -138,7 +138,6 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         messageSource.setBasenames("validation-message");
         return messageSource;
     }
-
 //    @Bean
 //    public MultipartResolver multipartResolver() {
 //        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();

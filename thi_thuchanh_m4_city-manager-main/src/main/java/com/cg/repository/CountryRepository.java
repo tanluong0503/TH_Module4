@@ -14,5 +14,4 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
             "c.nameCountry )" +
             "FROM Country c ")
     List<CountryDTO> getAllCountryDTO();
-
 }
